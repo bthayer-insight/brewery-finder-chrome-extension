@@ -1,5 +1,4 @@
 if (navigator.geolocation) {
-    // Call getCurrentPosition with success and failure callbacks
     navigator.geolocation.getCurrentPosition(findBreweries, currentPositionFailure);
 }
 else {
@@ -10,8 +9,6 @@ function findBreweries(position) {
     fetch(`https://api.openbrewerydb.org/breweries?by_dist=${position.coords.latitude},${position.coords.longitude}`)
         .then(response => response.json())
         .then(breweries => {
-            console.log(breweries);
-
             if (breweries.length && breweries.length > 0) {
                 const listContainer = document.getElementById("brewery-list-container");                
 
@@ -23,6 +20,7 @@ function findBreweries(position) {
                     ${brewery.city}, ${brewery.state} ${brewery.postal_code.split('-')[0]}
                     <p>${brewery.phone}</p>
                     <a href="${brewery.website_url}" target="_blank">${brewery.website_url}</a>
+                    <br><br>
                     <hr/>
                     `;
 

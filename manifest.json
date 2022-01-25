@@ -1,6 +1,6 @@
 {
-    "name": "Brewery Finder",
-    "description": "A very basic brewery finder created as an exercise while learning how to build Chrome extensions.",
+    "name": "Geolocation Brewery Finder",
+    "description": "A very basic brewery finder created as an exercise while learning how to build Chrome extensions. Uses the Open Brewery DB API: https://www.openbrewerydb.org/.",
     "version": "1.0",
     "manifest_version": 3,
     "permissions": [
